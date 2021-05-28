@@ -19,7 +19,6 @@ def edit_distance(s, t):
         return 1 + min(edit_distance(s[:-1], t[:-1]), edit_distance(s[:-1], t), \
                        edit_distance(s, t[:-1]))
 
-
 if __name__ == '__main__':
     with open('rosalind_edit.txt', 'r', encoding='utf-8') as handle:
         s_, t_ = map(lambda r: getattr(r, 'seq'), SeqIO.parse(handle, 'fasta'))
